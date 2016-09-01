@@ -1,4 +1,5 @@
-package lab1;
+package lab1.my.solution;
+
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
