@@ -27,6 +27,20 @@ public class Employee {
     public Employee() {
         currentDate = new Date();
     }
+    
+    private String getFormattedDate() {
+        SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyy");
+        return sdf.format(currentDate);
+    }
+    
+    public void doOrientation(String cubeId) {
+        meetWithHrForBenefitAndSalryInfo();
+        meetDepartmentStaff();
+        reviewDeptPolicies();
+        moveIntoCubical(cubeId);
+        System.out.println("Completed Orientation on: "+ getFormattedDate());
+    }
+    
 
     // Assume this must be performed first
     public void meetWithHrForBenefitAndSalryInfo() {
@@ -83,9 +97,9 @@ public class Employee {
     public String getStatus() {
         if(metWithHr && metDeptStaff
            && reviewedDeptPolicies && movedIn) {
-            return "Orientation is completed on: " + fmtDate;
+            return "Orientation is complete ";
         } else {
-            return fmtDate + ": Orientation in progress...";
+            return getFormattedDate() + ": Orientation in progress...";
         }
     }
     
