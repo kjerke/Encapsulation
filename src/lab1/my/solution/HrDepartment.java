@@ -5,6 +5,9 @@
  */
 package lab1.my.solution;
 
+import java.text.SimpleDateFormat;
+
+
 /**
  *
  * @author kevinjerke
@@ -15,6 +18,10 @@ public class HrDepartment {
     
     
    private void MeetWithHRAboutSalaryAndBenefits(){
+       SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
+        String fmtDate = sdf.format(currentDate);
+        System.out.println("Met with Hr on " + fmtDate);
+        metWithHr = true;
        System.out.println("Employee Meeting Date With HR has been Set.");
       
    }
