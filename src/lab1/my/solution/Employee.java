@@ -28,6 +28,15 @@ public class Employee {
         currentDate = new Date();
     }
     
+    // Added in class
+    public void completeEmployeeTraining(String cubeId){
+        meetWithHrForBenefitAndSalryInfo();
+        meetDepartmentStaff();
+        reviewDeptPolicies();
+        moveIntoCubicle(cubeId);
+    }
+    
+    
     private String getFormattedDate() {
         SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyy");
         return sdf.format(currentDate);
@@ -38,6 +47,8 @@ public class Employee {
         meetDepartmentStaff();
         reviewDeptPolicies();
         moveIntoCubical(cubeId);
+        
+       // Gives method too many jobs 
         System.out.println("Completed Training on: "+ getFormattedDate());
     }
     
@@ -52,6 +63,8 @@ public class Employee {
     public void meetDepartmentStaff() {
         if(metWithHr) {
             metDeptStaff = true;
+            
+            // gives method too many jobs 
             System.out.println("Met with Department Staff on: " + getFormattedDate());
         } else {
             System.out.println("Sorry, you cannot meet with "
@@ -63,6 +76,10 @@ public class Employee {
     public void reviewDeptPolicies() {
         if(metWithHr && metDeptStaff) {
             reviewedDeptPolicies = true;
+            
+            // gives method too many jobs 
+            // Validation Needed
+            
             System.out.println("Reviewed Department Policies on: " + getFormattedDate());
         } else {
             System.out.println("Sorry, you cannot review "
@@ -76,6 +93,10 @@ public class Employee {
         if(metWithHr && metDeptStaff && reviewedDeptPolicies) {
             this.cubeId = cubeId;
             this.movedIn = true;
+            
+            // gives method too many jobs 
+            // Validation Needed
+            
             System.out.println("Moved into cubical on: " + getFormattedDate());
         } else {
             System.out.println("Sorry, you cannot move in to a "
@@ -94,7 +115,7 @@ public class Employee {
             return getFormattedDate() + ": Training in progress...";
         }
     }
-    
+    // Validation Needed
     public String getFirstName(){
         return firstName;
     }

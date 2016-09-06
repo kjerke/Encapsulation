@@ -15,13 +15,23 @@ package lab1.my.solution;
 public class HrDepartment {
     // private String Requirements;
         private Employee employee;
-    
+     
+        // Added in class
+        private static int cubeId;
+        
+      // Added in class
+        
+//    public void trainNewEmployee(Employee employee){
+//        employee.completeEmployeeOrientation("" + cubeId++);
+//    }
+            
     public void trainNewEmployee(String firstName, String lastname, String ssn){
         Employee e = new Employee();
         e.setFirstName(firstName);
         e.setLastName(lastName);
         e.setSsn(ssn);
-        e.doOrientation("A101");
+        e.doTraining("A101");
+        e.completeEmployeeTraining(completeEmployeeTraining);
         employee = e;
         
     }

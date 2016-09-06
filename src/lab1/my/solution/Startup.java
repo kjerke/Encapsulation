@@ -1,5 +1,8 @@
 package lab1.my.solution;
 
+import java.util.HashSet;
+import java.util.Set;
+
 
 
 /**
@@ -21,6 +24,15 @@ public class Startup {
             may need to create a new class that talks to Employee. This does
             not have to be a GUI class.
         */
+        // Added in class
+        
+//        HrDepartment = hr new HrDepartment();
+//        Employee employee = new Employee();
+//        employee.setFirstName("John");
+//        
+//        hr.orientNewEmployee(Employee);
+        
+        
         
         HrDepartment hr = new HrDepartment();
         hr.trainNewEmployee("Kevin", "Jerke", "123-45-6789");
