@@ -33,12 +33,12 @@ public class Employee {
         return sdf.format(currentDate);
     }
     
-    public void doOrientation(String cubeId) {
+    public void doTraining(String cubeId) {
         meetWithHrForBenefitAndSalryInfo();
         meetDepartmentStaff();
         reviewDeptPolicies();
         moveIntoCubical(cubeId);
-        System.out.println("Completed Orientation on: "+ getFormattedDate());
+        System.out.println("Completed Training on: "+ getFormattedDate());
     }
     
 
@@ -76,7 +76,7 @@ public class Employee {
         if(metWithHr && metDeptStaff && reviewedDeptPolicies) {
             this.cubeId = cubeId;
             this.movedIn = true;
-            System.out.println("Moved into cublical on: " + getFormattedDate());
+            System.out.println("Moved into cubical on: " + getFormattedDate());
         } else {
             System.out.println("Sorry, you cannot move in to a "
                     + "cubicle until you have first met with HR "
@@ -89,9 +89,9 @@ public class Employee {
     public String getStatus() {
         if(metWithHr && metDeptStaff
            && reviewedDeptPolicies && movedIn) {
-            return "Orientation is complete ";
+            return "Training is complete ";
         } else {
-            return getFormattedDate() + ": Orientation in progress...";
+            return getFormattedDate() + ": Training in progress...";
         }
     }
     

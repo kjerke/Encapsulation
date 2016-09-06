@@ -23,7 +23,7 @@ public class Startup {
         */
         
         HrDepartment hr = new HrDepartment();
-        hr.orientNewEmployee("Kevin", "Jerke", "123-45-6789");
+        hr.trainNewEmployee("Kevin", "Jerke", "123-45-6789");
         
         System.out.println("The Employee Status is: " + hr.getEmployeeStatus());
     }

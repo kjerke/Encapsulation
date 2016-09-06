@@ -16,7 +16,7 @@ public class HrDepartment {
     // private String Requirements;
         private Employee employee;
     
-    public void orientNewEmployee(String firstName, String lastname, String ssn){
+    public void trainNewEmployee(String firstName, String lastname, String ssn){
         Employee e = new Employee();
         e.setFirstName(firstName);
         e.setLastName(lastName);
